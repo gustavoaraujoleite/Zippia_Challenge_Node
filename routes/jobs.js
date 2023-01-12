@@ -4,6 +4,6 @@ const jobsController = require("../controllers/jobsController");
 
 const router = express.Router();
 
-router.get("/jobs", jobsController.getJobs);
+router.get("/test/jobs", jobsController.getJobs);
 
 module.exports = router;

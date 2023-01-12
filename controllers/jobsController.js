@@ -26,7 +26,7 @@ exports.getJobs = async (req, res, next) => {
     .then((result) =>
       res.render("test/jobs", {
         jobs: result.jobs,
-        path: "/jobs",
+        // path: "/",
       })
     )
     .catch((err) => console.log(err));
