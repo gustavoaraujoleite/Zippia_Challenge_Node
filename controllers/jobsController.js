@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 exports.getJobs = async (req, res, next) => {
+  let data;
   try {
     const result = await axios.post("https://www.zippia.com/api/jobs/", {
       companySkills: true,
@@ -12,13 +13,11 @@ exports.getJobs = async (req, res, next) => {
       previousListingHashes: [],
     });
 
-    const data = result.data.jobs;
-
-    res.render("test/jobs", {
+    data = await result.data.jobs;
+    return res.render("test/jobs", {
       jobs: data.slice(0, 10),
       path: "/jobs",
     });
-    next();
   } catch (err) {
     console.log("Request failed");
   }
