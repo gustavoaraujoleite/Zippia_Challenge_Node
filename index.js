@@ -15,6 +15,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/test", jobRoutes);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080
 
-app.listen(PORT, () => console.log("Listening on PORT 3000"));
+app.listen(PORT, () => console.log(`Server running in port ${PORT}`));
