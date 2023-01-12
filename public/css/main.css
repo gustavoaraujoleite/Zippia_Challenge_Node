@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+  margin-bottom: 3rem;
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(48, 47, 47);
+}
+.header__title {
+  font-size: 34px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1040px) {
+  .header__container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+}
