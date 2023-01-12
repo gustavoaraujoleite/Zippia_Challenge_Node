@@ -30,7 +30,7 @@ exports.getJobs = async (req, res, next) => {
 
     //Render page from 'test/jobs' route and saving the data into a variable for fetching it into EJS file
       res.render("test/jobs", {
-        jobs: result.jobs,
+        jobs: result.jobs.slice(1, 11),
         // path: "/",
       })
     )
